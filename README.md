@@ -1,12 +1,10 @@
 # MilliKey
 
-在 Mac 开发的，目前也仅发布 Mac 版本，毕竟自己也就是在 Mac 用
-
-~~三句话不离 Mac~~
+在 Mac 开发的，目前也仅发布 Mac 版本，毕竟自己也就是在 Mac 用 ~~三句话不离 Mac~~
 
 ## Feature
 
-- `v1.0` — $Cmd-V-Enter$
+- `v1.0`  —  $Cmd+V+Enter$
 
 ## Note
 
