@@ -87,34 +87,35 @@ void create_default_json(const char* filename) {
 }
 
 void send_cmd_v_enter() {
+    int interval = 100;
     CGEventSourceRef source = CGEventSourceCreate(kCGEventSourceStateCombinedSessionState);
 
     // 1. Command down
     CGEventRef cmdDown = CGEventCreateKeyboardEvent(source, (CGKeyCode)55, true);
     CGEventPost(kCGHIDEventTap, cmdDown);
-    usleep(5000);
+    usleep(interval);
 
     // 2. V down with Command flag
     CGEventRef vDown = CGEventCreateKeyboardEvent(source, (CGKeyCode)9, true);
     CGEventSetFlags(vDown, kCGEventFlagMaskCommand);
     CGEventPost(kCGHIDEventTap, vDown);
-    usleep(5000);
+    usleep(interval);
 
     // 3. V up with Command flag
     CGEventRef vUp = CGEventCreateKeyboardEvent(source, (CGKeyCode)9, false);
     CGEventSetFlags(vUp, kCGEventFlagMaskCommand);
     CGEventPost(kCGHIDEventTap, vUp);
-    usleep(5000);
+    usleep(interval);
 
     // 4. Command up
     CGEventRef cmdUp = CGEventCreateKeyboardEvent(source, (CGKeyCode)55, false);
     CGEventPost(kCGHIDEventTap, cmdUp);
-    usleep(5000);
+    usleep(interval);
 
     // 5. Enter down
     CGEventRef enterDown = CGEventCreateKeyboardEvent(source, (CGKeyCode)36, true);
     CGEventPost(kCGHIDEventTap, enterDown);
-    usleep(5000);
+    usleep(interval);
 
     // 6. Enter up
     CGEventRef enterUp = CGEventCreateKeyboardEvent(source, (CGKeyCode)36, false);
