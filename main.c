@@ -88,7 +88,7 @@ void create_default_json(const char* filename) {
 
 void send_cmd_v_enter() {
     int interval_1 = 100;
-    int interval_2 = 1200;
+    int interval_2 = 1500;
     CGEventSourceRef source = CGEventSourceCreate(kCGEventSourceStateCombinedSessionState);
 
     // 1. Command down
